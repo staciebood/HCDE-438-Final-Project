@@ -1,38 +1,211 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  flex: 1;
+  width: 100%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  gap: 3vh;
+  padding: 10px 20px;
+  height: 6vh;
+  margin: 10px;
+}
+
+.input-field button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 1vh;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.input-field button:hover {
+  background-color: #45a049;
+}
+
+.input-field input[type="text"] {
+  width: 30vh;
+  height: 3vh;
+  border: none;
+  outline: none;
+  border-radius: 1vh;
+  padding: 5px;
+
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3vh;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 1vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.draggable {
+  top: auto !important;
+  left: auto !important;
+}
+
+.canvas-content {
+  margin: 3rem;
+  box-sizing: border-box;
+}
+
+.clear-button {
+  margin-top: 1rem;
+}
+
+.canvas {
+  display: block;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-top: 2rem;
+  
+  height: auto;
+  max-width: 800px;
+  box-sizing: border-box;
+  
+}
+
+.canvas-container {
+  display: flex;
+  justify-content:flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+
+.stickers-container {
+  display: flex;       
+  flex: 1;             
+  flex-wrap: wrap;     
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px;           
+  padding: 10px;
+}
+
+.sticker {
+  flex: 1 1 45%;           
+  max-width: 45%;          
+  box-sizing: border-box;  
+  padding: 5px;            
+  margin-bottom: 10px;   
+  text-align: center;
+}
+
+/* Color picker container */
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+/* Paragraph styling */
+p {
+  font-weight: bold;
+  color: black;
+}
+
+/* Canvas and button wrapper */
+.canvas-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Save button styling */
+.save-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.save-button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* layout for smaller screens */
+@media (max-width: 800px) {
+  .sticker {
+    flex: 1 1 100%;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-field {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 60px;
+  }
+
+  .input-field input[type="text"] {
+    max-width: 100%;
+  }
+
+  .canvas-container {
+    flex-direction: column-reverse;
+    gap: 5vh;
+  }
+
+  p.label {
+    text-align: center;
+  }
+
+  .color-picker-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }
+
