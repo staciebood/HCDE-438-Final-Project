@@ -9,7 +9,7 @@ function CanvasDrawing({ dogImage, clearCanvasTrigger, setClearCanvasTrigger }) 
   const offscreenCanvasRef = useRef(null);
   const lastPositionRef = useRef({ x: 0, y: 0 });
   const isDrawingRef = useRef(false);
-  const [drawingColor, setDrawingColor] = useState('red'); // Default color is red
+  const [drawingColor, setDrawingColor] = useState("#000000");
   
 
   // Drop target for stickers
@@ -142,8 +142,8 @@ const saveCanvasImage = () => {
         <Sticker className = "sticker" image="/classic-tan-felt-hat.png" width={150} height={150} />
         <Sticker className = "sticker" image="hat-isolated-white-background.png" width={200} height={150} />
         <Sticker className = "sticker" image="/dog-chew-bones-isolated-white-background.png"width={150} height={150} />
-        <Sticker className = "sticker" image="/10077557.png" width={150} height={150} />
-        <Sticker className = "sticker" image="/10077557.png" width={150} height={150} />
+        <Sticker className = "sticker" image="/strawberry_14605295.png" width={150} height={150} />
+        <Sticker className = "sticker" image="/tennis-ball_140400.png" width={100} height={100} />
       </div>
       </div>
       <div className="color-picker-container">
