@@ -5,7 +5,7 @@ import DogImage from './DogImage';
 import CanvasDrawing from './CanvasDrawing';
 import './App.css'; 
 
-
+/*used chat gpt to debug*/
 
 function App() {
   const [breed, setBreed] = useState('');

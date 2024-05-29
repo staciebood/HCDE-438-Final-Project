@@ -11,17 +11,15 @@ function Sticker({ image, width, height }) {
     }),
   });
 
-  // State to track if the sticker has been dropped
   const [dropped, setDropped] = useState(false);
 
-  // Function to reset the dropped state after a delay
+
   const resetDroppedState = () => {
     setTimeout(() => {
       setDropped(false);
     }, 100);
   };
 
-  // Effect to reset the dropped state when it changes
   useEffect(() => {
     if (dropped) {
       resetDroppedState();
@@ -32,7 +30,6 @@ function Sticker({ image, width, height }) {
     <div
       ref={(node) => {
         drag(node);
-        // Set dropped state to false when the drag ref changes
         setDropped(false);
       }}
       style={{ width, height }}
@@ -49,19 +46,3 @@ function Sticker({ image, width, height }) {
 }
 
 export default Sticker;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

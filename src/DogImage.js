@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+/* used chat gpt to debug*/ 
+
 const DogImage = ({ breed, setDogImage, setError }) => {
   useEffect(() => {
     const fetchRandomImage = async () => {

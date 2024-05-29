@@ -2,7 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Sticker from './Sticker';
 import { ItemTypes } from './ItemTypes';
-import './App.css'; // Ensure this import exists and points to your CSS file
+import './App.css'; 
+
+/*used chat gpt to debug*/
 
 function CanvasDrawing({ dogImage, clearCanvasTrigger, setClearCanvasTrigger }) {
   const canvasRef = useRef(null);
@@ -117,13 +119,9 @@ const saveCanvasImage = () => {
 
   try {
     const dataURL = canvas.toDataURL(); 
-
-    // Create a temporary anchor element
     const anchor = document.createElement('a');
     anchor.href = dataURL;
-    anchor.download = 'canvas_image.png'; // Set the filename for the downloaded image
-
-    // Trigger a click event on the anchor to start the download
+    anchor.download = 'canvas_image.png'; 
     anchor.click();
 
   } catch (error) {
